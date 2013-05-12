@@ -1,0 +1,10 @@
+Welcome to Resume Builder
+=========================
+
+Created by Murdo Aird using the RailsApp generator (http://railsapps.github.io/).
+
+The project is a throw-away prototype that uses both Evernote (storage) and Dropbox (hosting) to allow a user to construct an online résumé/CV
+
+More details can be found on Mura.ly - http://mrl.li/11QIqNU
+
+
