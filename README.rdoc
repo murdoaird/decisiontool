@@ -7,4 +7,5 @@ The project is a throw-away prototype that uses both Evernote (storage) and Drop
 
 More details can be found on Mura.ly - http://mrl.li/11QIqNU
 
+Will be deployed on Heroku PaaS.
 
