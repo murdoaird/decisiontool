@@ -4,7 +4,7 @@ ResumeBuilder::Application.routes.draw do
   end
   root :to => "home#index"
   #TODO: comment this line back in?
-  devise_for :users
+  #devise_for :users
   resources :users
 
   # The priority is based upon order of creation:
