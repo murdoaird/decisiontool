@@ -4,7 +4,7 @@
     <data-source source="LOCAL" name="Rails resume_builder: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3bb2d4a3-d583-4850-bd6a-eb18e7d8a592">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_dev</jdbc-url>
-      <user-name>resume_builder_dev_user</user-name>
+      <user-name>resume_builder_user</user-name>
       <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
       <libraries>
         <library>
@@ -18,7 +18,7 @@
     <data-source source="LOCAL" name="Rails resume_builder: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="6f314a62-5db2-425a-ad20-0c5af5d6ba64">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_prod</jdbc-url>
-      <user-name>resume_builder_prod_user</user-name>
+      <user-name>resume_builder_user</user-name>
       <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
       <libraries>
         <library>
@@ -32,7 +32,7 @@
     <data-source source="LOCAL" name="Rails resume_builder: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3d683131-e3c5-46f8-bad7-394881bb22ad">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
-      <user-name>resume_builder_test_user</user-name>
+      <user-name>resume_builder_user</user-name>
       <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
       <libraries>
         <library>
@@ -46,7 +46,7 @@
     <data-source source="LOCAL" name="Rails resume_builder: cucumber" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="95d68207-2f25-48bf-81b0-4c980506ed2b">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
-      <user-name>resume_builder_test_user</user-name>
+      <user-name>resume_builder_user</user-name>
       <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
       <libraries>
         <library>

@@ -30,4 +30,8 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
+
+  def evernote
+    redirect_to users_path, :notice => "Call Evernote."
+  end
 end
