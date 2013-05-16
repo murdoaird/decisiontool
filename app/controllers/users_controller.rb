@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
-  OAUTH_CONSUMER_KEY = "murdoaird"
-  OAUTH_CONSUMER_SECRET = "363580e8334d23bb"
+  OAUTH_CONSUMER_KEY = ""
+  OAUTH_CONSUMER_SECRET = ""
 
   SANDBOX = true
 
