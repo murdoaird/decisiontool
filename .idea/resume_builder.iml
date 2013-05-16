@@ -36,12 +36,14 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.3.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v0.9.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.0.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v2.2.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="email_spec (v1.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="evernote-thrift (v1.24.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="evernote_oauth (v0.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.2.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
@@ -57,6 +59,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.23, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.9, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="oauth (v0.4.7, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.15.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />

@@ -64,7 +64,7 @@ GEM
       cucumber (>= 1.2.0)
       nokogiri (>= 1.5.0)
       rails (~> 3.0)
-    database_cleaner (0.9.1)
+    database_cleaner (1.0.1)
     debug_inspector (0.0.2)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
@@ -76,6 +76,10 @@ GEM
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
+    evernote-thrift (1.24.0)
+    evernote_oauth (0.2.1)
+      evernote-thrift
+      oauth (>= 0.4.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -104,6 +108,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.3)
     nokogiri (1.5.9)
+    oauth (0.4.7)
     orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -186,10 +191,12 @@ DEPENDENCIES
   database_cleaner (>= 0.9.1)
   devise (>= 2.1.2)
   email_spec (>= 1.4.0)
+  evernote_oauth
   factory_girl_rails (>= 4.1.0)
   figaro (>= 0.5.0)
   jquery-rails
   launchy (>= 2.1.2)
+  oauth
   pg
   quiet_assets (>= 1.0.1)
   rails (= 3.2.8)

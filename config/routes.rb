@@ -4,18 +4,11 @@ ResumeBuilder::Application.routes.draw do
   end
   root :to => "home#index"
   devise_for :users
-  #resources :users
-  resources :users do
-    get 'evernote', on: :member
-  end
-=begin
 
   resources :users do
-    collection do
-      get 'evernote'
-    end
+    get 'evernote', on: :member
+    get 'evernotecallback', on: :member
   end
-=end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
