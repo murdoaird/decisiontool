@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
-  OAUTH_CONSUMER_KEY = "murdoaird"
-  OAUTH_CONSUMER_SECRET = "363580e8334d23bb"
-
   SANDBOX = true
 
 
@@ -65,7 +62,7 @@ class UsersController < ApplicationController
   end
 
   def client
-    @client ||= EvernoteOAuth::Client.new(token: auth_token, consumer_key:OAUTH_CONSUMER_KEY, consumer_secret:OAUTH_CONSUMER_SECRET, sandbox: SANDBOX)
+    @client ||= EvernoteOAuth::Client.new(token: auth_token, consumer_key:ENV['OAUTH_CONSUMER_KEY'].dup, consumer_secret:ENV['OAUTH_CONSUMER_SECRET'].dup, sandbox: SANDBOX)
   end
 
   def user_store
