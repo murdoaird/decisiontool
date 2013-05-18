@@ -4,25 +4,19 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: resume_builder_dev
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: resume_builder_dev_user
-  password: resume_builder_password
+  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: resume_builder_test
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  username: resume_builder_test_user
-  password: resume_builder_password
+  timeout: 5000
 
 #TODO: create prod db & user
 production:

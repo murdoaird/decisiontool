@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="Rails resume_builder: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3bb2d4a3-d583-4850-bd6a-eb18e7d8a592">
-    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-    <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_dev</jdbc-url>
-    <user-name>resume_builder_user</user-name>
-    <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
-    <libraries>
-      <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
-      </library>
-      <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
-      </library>
-    </libraries>
-  </data-source>
   <data-source source="LOCAL" name="Rails resume_builder: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="6f314a62-5db2-425a-ad20-0c5af5d6ba64">
     <jdbc-driver>org.postgresql.Driver</jdbc-driver>
     <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_prod</jdbc-url>
-    <user-name>resume_builder_user</user-name>
+    <user-name>resume_builder_prod_user</user-name>
     <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
     <libraries>
       <library>
@@ -28,32 +14,86 @@
       </library>
     </libraries>
   </data-source>
-  <data-source source="LOCAL" name="Rails resume_builder: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3d683131-e3c5-46f8-bad7-394881bb22ad">
-    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-    <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
-    <user-name>resume_builder_user</user-name>
-    <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+  <data-source source="LOCAL" name="Rails resume_builder: development" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="b76b3817-accb-4e5e-b820-6be231825875">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
     <libraries>
       <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url>
       </library>
       <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
       </library>
     </libraries>
+    <schema name="" catalog=""/>
+    <table name="roles" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="resource_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="resource_type" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_roles_on_name_and_resource_type_and_resource_id" unique="true" columns="name,resource_type,resource_id"/>
+      <index name="index_roles_on_name" unique="true" columns="name"/>
+    </table>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
+      <column name="name" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="seq" sqlType="" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="users" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" length="2000000000" precision="10" nullable="false" jdbcType="4"/>
+      <column name="email" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="encrypted_password" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="reset_password_token" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="reset_password_sent_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="remember_created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="sign_in_count" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="current_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="current_sign_in_ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="last_sign_in_ip" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" length="2000000000" precision="10" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR(255)" length="2000000000" precision="10" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
+      <index name="index_users_on_email" unique="true" columns="email"/>
+    </table>
+    <table name="users_roles" schema="" catalog="" type="TABLE">
+      <column name="user_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <column name="role_id" sqlType="INTEGER" length="2000000000" precision="10" nullable="true" jdbcType="4"/>
+      <index name="index_users_roles_on_user_id_and_role_id" unique="true" columns="user_id,role_id"/>
+    </table>
   </data-source>
-  <data-source source="LOCAL" name="Rails resume_builder: cucumber" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="95d68207-2f25-48bf-81b0-4c980506ed2b">
-    <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-    <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
-    <user-name>resume_builder_user</user-name>
-    <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+  <data-source source="LOCAL" name="Rails resume_builder: test" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="5627c1c3-3b02-48a8-ac72-378b4fc04db9">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
     <libraries>
       <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url>
       </library>
       <library>
-        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
       </library>
     </libraries>
+    <schema name="" catalog=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails resume_builder: cucumber" product="SQLite" version="3.7.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" uuid="8ae707ae-a349-49b4-97f2-cae144004b35">
+    <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+    <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/sqlite-jdbc-3.7.2.jar</url>
+      </library>
+    </libraries>
+    <schema name="" catalog=""/>
   </data-source>
 </component>

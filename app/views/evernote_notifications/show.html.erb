@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @evernote_notification.user_id %>
+</p>
+
+<p>
+  <b>Note guid:</b>
+  <%= @evernote_notification.note_guid %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @evernote_notification.action %>
+</p>
+
+<p>
+  <b>Notification date:</b>
+  <%= @evernote_notification.notification_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_evernote_notification_path(@evernote_notification) %> |
+<%= link_to 'Back', evernote_notifications_path %>

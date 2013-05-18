@@ -1,4 +1,6 @@
 ResumeBuilder::Application.routes.draw do
+  resources :evernote_notifications
+
   authenticated :user do
     root :to => 'home#index'
   end
@@ -10,6 +12,7 @@ ResumeBuilder::Application.routes.draw do
     get 'evernotecallback', on: :member
   end
 
+  post "evernote/webhook"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

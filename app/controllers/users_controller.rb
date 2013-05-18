@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   SANDBOX = true
 
-
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator.'
     @users = User.all
@@ -54,7 +53,7 @@ class UsersController < ApplicationController
     # Get username
     session[:username] = en_user.username
 
-    redirect_to users_path, :notice => en_user.username
+    redirect_to users_path, :notice => en_user.username + " has " + total_note_count.to_s + " notes."
   end
 
   def auth_token

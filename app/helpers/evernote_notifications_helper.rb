@@ -1,0 +1,2 @@
+module EvernoteNotificationsHelper
+end

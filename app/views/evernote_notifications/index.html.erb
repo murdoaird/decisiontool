@@ -1,0 +1,29 @@
+<h1>Listing evernote_notifications</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Note guid</th>
+    <th>Action</th>
+    <th>Notification date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @evernote_notifications.each do |evernote_notification| %>
+  <tr>
+    <td><%= evernote_notification.user_id %></td>
+    <td><%= evernote_notification.note_guid %></td>
+    <td><%= evernote_notification.action %></td>
+    <td><%= evernote_notification.notification_date %></td>
+    <td><%= link_to 'Show', evernote_notification %></td>
+    <td><%= link_to 'Edit', edit_evernote_notification_path(evernote_notification) %></td>
+    <td><%= link_to 'Destroy', evernote_notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Evernote notification', new_evernote_notification_path %>
