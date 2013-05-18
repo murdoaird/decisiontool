@@ -35,7 +35,7 @@ class UsersController < ApplicationController
 
   def evernote
     @last_error = ''
-    callback_url = request.url.chomp("requesttoken").concat("callback")
+    callback_url = request.url.chomp("requesttoken").concat("callback")#.concat(params[:id])
     begin
       session[:request_token] = client.request_token(:oauth_callback => callback_url)
       redirect_to session[:request_token].authorize_url
@@ -53,7 +53,10 @@ class UsersController < ApplicationController
     # Get username
     session[:username] = en_user.username
 
-    redirect_to users_path, :notice => en_user.username + " has " + total_note_count.to_s + " notes."
+    #save the details against the user
+    User.update(params[:id], :evernote_oauth => session[:oauth_verifier])
+
+      redirect_to users_path, :notice => en_user.username + " has " + total_note_count.to_s + " notes."
   end
 
   def auth_token

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518094627) do
+ActiveRecord::Schema.define(:version => 20130518203605) do
 
   create_table "evernote_notifications", :force => true do |t|
     t.string   "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130518094627) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "evernote_oauth"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
