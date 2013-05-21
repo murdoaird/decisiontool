@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69967ca1-9795-4a1b-aeda-b2d439405b7d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+    <list default="true" id="69967ca1-9795-4a1b-aeda-b2d439405b7d" name="Default" comment="mistakenly had evernote webhook as  a POST when it should have been a GET">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/evernote_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/evernote_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="resume_builder.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368910897682" ignored="false" />
+    <file path="/Dummy.txt" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369169621879" ignored="false" />
     <file path="/Gemfile" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368882059451" ignored="false" />
     <file path="/application.yml" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368897309186" ignored="false" />
     <file path="$PROJECT_DIR$/reference_material/rails3-bootstrap-devise-cancan-master/app/assets/stylesheets/home.css.scss" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368377151592" ignored="false" />
@@ -19,13 +21,15 @@
     <file path="/_navigation.html.erb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368564301738" ignored="false" />
     <file path="/database.yml" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368479758393" ignored="false" />
     <file path="/edit.html.erb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368647636658" ignored="false" />
-    <file path="/a.dummy" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368738064058" ignored="false" />
+    <file path="/a.dummy" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369168912755" ignored="false" />
     <file path="/users_controller.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368910316738" ignored="false" />
     <file path="/user1_controller.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368648005164" ignored="false" />
-    <file path="/index.html.erb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368897694680" ignored="false" />
+    <file path="/index.html.erb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369169393863" ignored="false" />
     <file path="/routes.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369165865360" ignored="false" />
-    <file path="/evernote_controller.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368871406575" ignored="false" />
+    <file path="/evernote_controller.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369168810696" ignored="false" />
     <file path="/session_store.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1368902297495" ignored="false" />
+    <file path="/_evernote.html.erb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369169237794" ignored="false" />
+    <file path="/home_controller.rb" changelist="69967ca1-9795-4a1b-aeda-b2d439405b7d" time="1369169311128" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,37 +54,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="71" selection-start="959" selection-end="959" vertical-scroll-proportion="-11.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="48" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="82" selection-end="100" vertical-scroll-proportion="-1.9354838">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evernote_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/evernote_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="28" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+            <state line="7" column="29" selection-start="148" selection-end="148" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evernote_notifications_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/evernote_notifications_controller.rb">
+      <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="36" column="52" selection-start="721" selection-end="721" vertical-scroll-proportion="0.5481728">
               <folding />
             </state>
           </provider>
@@ -95,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="5" selection-start="318" selection-end="318" vertical-scroll-proportion="0.3166227">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,14 +121,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/_user.html.erb" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/user1_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/users_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/evernote_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/application.yml" />
@@ -142,6 +133,10 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/evernote_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/evernote/_evernote.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       </list>
     </option>
   </component>
@@ -301,7 +296,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -866,7 +865,11 @@
       <created>1368910904422</created>
       <updated>1368910904422</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="mistakenly had evernote webhook as  a POST when it should have been a GET">
+      <created>1369166047887</created>
+      <updated>1369166047887</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -893,18 +896,18 @@
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136646" sideWeight="0.6231003" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3136646" sideWeight="0.6231003" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.6708075" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25987843" sideWeight="0.6708075" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4673913" sideWeight="0.7651976" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25987843" sideWeight="0.5326087" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4673913" sideWeight="0.7651976" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.3024316" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32919255" sideWeight="0.6975684" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4673913" sideWeight="0.23480242" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.6975684" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -955,7 +958,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="now storing oauth against user in db" />
+    <option name="LAST_COMMIT_MESSAGE" value="mistakenly had evernote webhook as  a POST when it should have been a GET" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -977,6 +980,7 @@
     <MESSAGE value="Got call to Evernote authorisation added and working. Still WIP though." />
     <MESSAGE value="Merge branch 'master' of github.com:murdoaird/ProjectSeven&#10;&#10;Conflicts:&#10;&#9;app/controllers/users_controller.rb&#10;" />
     <MESSAGE value="now storing oauth against user in db" />
+    <MESSAGE value="mistakenly had evernote webhook as  a POST when it should have been a GET" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -985,6 +989,11 @@
           <url>file://$PROJECT_DIR$/app/controllers/users_controller.rb</url>
           <line>56</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/evernote_controller.rb</url>
+          <line>8</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -995,38 +1004,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/actionpack-3.2.8/lib/action_controller/metal/url_for.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/actionpack-3.2.8/lib/action_dispatch/routing/url_for.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="0" selection-start="4429" selection-end="4429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/activesupport-3.2.8/lib/active_support/core_ext/class/attribute.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/actionpack-3.2.8/lib/action_dispatch/http/url.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="3082" selection-end="3082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/rack-1.4.5/lib/rack/request.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="0" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.0">
@@ -1062,16 +1043,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/rack-1.4.5/lib/rack/session/abstract/id.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="71" selection-start="959" selection-end="959" vertical-scroll-proportion="-11.666667">
+        <state line="70" column="0" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@game_stats/gems/rack-1.4.5/lib/rack/session/abstract/id.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/evernote_notifications_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.5224276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="71" selection-start="959" selection-end="959" vertical-scroll-proportion="0.69298244">
           <folding />
         </state>
       </provider>
@@ -1083,30 +1078,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="48" selection-start="1891" selection-end="1891" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/evernote_notifications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/evernote_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+        <state line="9" column="31" selection-start="287" selection-end="287" vertical-scroll-proportion="0.46551725">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="5" selection-start="318" selection-end="318" vertical-scroll-proportion="0.3166227">
+        <state line="7" column="29" selection-start="148" selection-end="148" vertical-scroll-proportion="-4.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_user.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="327" selection-end="327" vertical-scroll-proportion="0.2964427">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="82" selection-end="100" vertical-scroll-proportion="-1.9354838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="52" selection-start="721" selection-end="721" vertical-scroll-proportion="0.5481728">
           <folding />
         </state>
       </provider>

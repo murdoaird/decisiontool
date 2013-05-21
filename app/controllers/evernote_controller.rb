@@ -1,4 +1,5 @@
 class EvernoteController < ApplicationController
+
   def webhook
     newNote = EvernoteNotification.new()
 
@@ -11,4 +12,6 @@ class EvernoteController < ApplicationController
     render :text => "true", :status => 200
 
   end
+
+
 end

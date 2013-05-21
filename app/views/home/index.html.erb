@@ -2,3 +2,7 @@
 <% @users.each do |user| %>
     <p>User: <%=link_to user.name, user %></p>
 <% end %>
+
+<h1>My notes</h1>
+
+<%= @evernote_count.to_s() %>
