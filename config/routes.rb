@@ -12,7 +12,7 @@ ResumeBuilder::Application.routes.draw do
     get 'evernotecallback', on: :member
   end
 
-  post "evernote/webhook"
+  get "evernote/webhook"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
