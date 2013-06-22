@@ -1,13 +1,9 @@
-Welcome to Resume Builder
+Welcome to Decision Tool
 =========================
 
-Created by Murdo Aird using the RailsApp generator (http://railsapps.github.io/).
+Created by Murdo Aird (22/June 2013)
 
-The project is a throw-away prototype that uses both Evernote (storage) and Dropbox (hosting) to allow a user to construct an online résumé/CV
-
-More details can be found on Mura.ly - http://mrl.li/11QIqNU
-
-Will be deployed on Heroku PaaS.
+The project is a throw-away prototype.
 
 =========================
 <end>
