@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @decision.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @decision.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_decision_path(@decision) %> |
+<%= link_to 'Back', decisions_path %>
+
+<p>
+  <b>Elements:</b>
+<% @decision.decision_element.each do |element| %>
+  <tr>
+    <td><%= element.name %></td>
+    <td><%= element.description %></td>
+    <td><%= link_to 'Show', element %></td>
+    <td><%= link_to 'Edit', edit_element_path(element) %></td>
+    <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

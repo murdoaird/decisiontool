@@ -1,4 +1,10 @@
 ResumeBuilder::Application.routes.draw do
+  resources :decision_elements
+
+  resources :elements
+
+  resources :decisions
+
   authenticated :user do
     root :to => 'home#index'
   end

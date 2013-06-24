@@ -1,0 +1,25 @@
+<h1>Listing decisions</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @decisions.each do |decision| %>
+  <tr>
+    <td><%= decision.title %></td>
+    <td><%= decision.description %></td>
+    <td><%= link_to 'Show', decision %></td>
+    <td><%= link_to 'Edit', edit_decision_path(decision) %></td>
+    <td><%= link_to 'Destroy', decision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Decision', new_decision_path %>

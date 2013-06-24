@@ -2,3 +2,7 @@
 <% @users.each do |user| %>
     <p>User: <%=link_to user.name, user %></p>
 <% end %>
+</p>
+<% @decisions.each do |decision| %>
+    <p>Decision: <%=link_to decision.title, decision %></p>
+<% end %>
