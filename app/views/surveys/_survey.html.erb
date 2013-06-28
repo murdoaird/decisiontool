@@ -1,0 +1,16 @@
+<div id="survey-decision-<%= survey.id %>" class="modal" style="display: none;">
+  <%= simple_form_for survey, :url => save_survey_survey_path(survey), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">&#215;</a>
+        <h3>Run Survey</h3>
+      </div>
+      <div class="modal-body">
+        Compare the importance of each element by ranking it against the others:</p>
+        <%= build_survey(survey, Survey.all) %>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit "Save", :class => "btn" %>
+        <a class="btn" data-dismiss="modal" href="#">Close</a>
+      </div>
+  <% end %>
+</div>
