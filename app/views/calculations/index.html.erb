@@ -1,0 +1,27 @@
+<h1>Listing calculations</h1>
+
+<table>
+  <tr>
+    <th>Decision</th>
+    <th>Element</th>
+    <th>Value</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calculations.each do |calculation| %>
+  <tr>
+    <td><%= calculation.decision_id %></td>
+    <td><%= calculation.element_id %></td>
+    <td><%= calculation.value %></td>
+    <td><%= link_to 'Show', calculation %></td>
+    <td><%= link_to 'Edit', edit_calculation_path(calculation) %></td>
+    <td><%= link_to 'Destroy', calculation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calculation', new_calculation_path %>

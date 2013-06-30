@@ -2,7 +2,12 @@
 <div class="span8">
   <table border="0" class="table table-condensed">
     <thead>
-    <tr>
+    <% if !user_signed_in? %>
+      <p>Please log in to access the system.
+        <%= link_to('Login', new_user_session_path)  %>
+      </li>
+	<% else %>
+	<tr>
       <th>Decision</th>
       <th>Description</th>
       <th>Elements</th>
@@ -12,22 +17,26 @@
     </tr>
     </thead>
     <tbody>
-    <% @decisions.each do |decision| %>
-        <tr>
-          <td><%=link_to decision.title, decision %></td>
-          <td><%= decision.description %></td>
-          <td><%= decision.elements.count %></td>
-          <td>
-            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>" class="btn btn-mini" type="button">View elements</a>
-            <%= render(partial: "elements/element", object: decision)%>
-          </td>
-          <td>
-            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>" class="btn btn-mini" type="button">Run survey</a>
-            <%= render(partial: "surveys/survey", object: decision)%>
-          </td>
-          <td><%= link_to("Delete decision", decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
-        </tr>
-    <% end %>
+	    <% @decisions.each do |decision| %>
+	        <tr>
+	          <td><%=link_to decision.title, decision %></td>
+	          <td><%= decision.description %></td>
+	          <td><%= decision.elements.count %></td>
+	          <td>
+	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>" class="btn btn-mini" type="button">View elements</a>
+	            <%= render(partial: "elements/element", object: decision)%>
+	          </td>
+	          <td>
+	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>" class="btn btn-mini" type="button">Run survey</a>
+	            <%= render(partial: "surveys/survey", object: decision)%>
+	          </td>
+	          <td>
+	            <a href="decisions/<%= decision.id %>/results" class="btn btn-mini" type="button">View results</a>
+	          </td>
+	          <td><%= link_to("Delete decision", decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+	        </tr>
+	    <% end %>
     </tbody>
+   <% end %>
   </table>
 </div>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Decision:</b>
+  <%= @survey.decision_id %>
+</p>
+
+<p>
+  <b>A element:</b>
+  <%= @survey.a_element_id %>
+</p>
+
+<p>
+  <b>B element:</b>
+  <%= @survey.b_element_id %>
+</p>
+
+<p>
+  <b>A value:</b>
+  <%= @survey.a_value %>
+</p>
+
+<p>
+  <b>B value:</b>
+  <%= @survey.b_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

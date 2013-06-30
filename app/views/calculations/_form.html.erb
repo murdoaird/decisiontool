@@ -1,0 +1,17 @@
+<%= simple_form_for(@calculation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :decision_id %>
+
+    <%= f.input :element_id %>
+
+    <%= f.input :value %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

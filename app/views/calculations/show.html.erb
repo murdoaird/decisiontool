@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Decision:</b>
+  <%= @calculation.decision_id %>
+</p>
+
+<p>
+  <b>Element:</b>
+  <%= @calculation.element_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @calculation.value %>
+</p>
+
+
+<%= link_to 'Edit', edit_calculation_path(@calculation) %> |
+<%= link_to 'Back', calculations_path %>

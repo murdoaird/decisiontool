@@ -141,11 +141,4 @@ class SurveysController < ApplicationController
       format.html { redirect_to surveys_url, notice: 'Murdo is great!' }
     end
   end
-  
-  def to_frac
-    numerator, denominator = split('/').map(&:to_f)
-    denominator ||= 1
-    numerator/denominator
-  end
-  
 end

@@ -1,4 +1,6 @@
 ResumeBuilder::Application.routes.draw do
+  resources :calculations
+
   resources :surveys
 
   resources :decision_elements
@@ -18,6 +20,10 @@ ResumeBuilder::Application.routes.draw do
       member do 
           put 'save_survey'
       end
+  end
+  
+  resources :decisions do
+    get 'results', :on => :member
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

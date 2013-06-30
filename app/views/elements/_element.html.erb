@@ -1,0 +1,29 @@
+<div id="decision-elements-<%= element.id %>" class="modal" style="display: none;">
+	<div class="modal-header">
+    	<a class="close" data-dismiss="modal">&#215;</a>
+    	<h3>View Elements</h3>
+  	</div>
+	<div class="modal-body">
+		<table class="table table-condensed">
+		    <thead>
+		    <tr>
+		      <th>Element</th>
+		      <th>Description</th>
+		      <th></th>
+		    </tr>
+		    </thead>
+		    <tbody>
+		    <% element.elements.each do |element| %>
+		        <tr>
+		          <td><%= element.name %></td>
+		          <td><%= element.description %></td>
+		          <td><%= link_to("Delete", element_path(element), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+		        </tr>
+		    <% end %>
+		    </tbody>
+		</table>
+      </div>
+      <div class="modal-footer">
+        <a class="btn" data-dismiss="modal" href="#">Close</a>
+      </div>
+</div>
