@@ -1,6 +1,6 @@
 <h1>Listing elements</h1>
 
-<table>
+<table cellpadding="10" >
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -13,9 +13,9 @@
   <tr>
     <td><%= element.name %></td>
     <td><%= element.description %></td>
-    <td><%= link_to 'Show', element %></td>
-    <td><%= link_to 'Edit', edit_element_path(element) %></td>
-    <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', element %>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= link_to 'Edit', edit_element_path(element) %>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= link_to 'Delete', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

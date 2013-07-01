@@ -1,15 +1,13 @@
 <h1>Listing surveys</h1>
 
-<table>
+<table cellpadding="10" border="0">
   <tr>
     <th>Decision</th>
     <th>A element</th>
     <th>B element</th>
     <th>A value</th>
     <th>B value</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="3"></th>
   </tr>
 
 <% @surveys.each do |survey| %>
@@ -19,9 +17,9 @@
     <td><%= survey.b_element_id %></td>
     <td><%= survey.a_value %></td>
     <td><%= survey.b_value %></td>
-    <td><%= link_to 'Show', survey %></td>
-    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
-    <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', survey %>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= link_to 'Edit', edit_survey_path(survey) %>&nbsp;&nbsp;&nbsp;</td>
+    <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

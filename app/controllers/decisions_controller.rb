@@ -119,6 +119,7 @@ class DecisionsController < ApplicationController
       f.options[:title][:text] = @decision.title
       f.legend(:reversed => 'true')
       f.xAxis(:categories=> data_labels)
+      f.yAxis(:min=> 0, :max=> 100)
       f.plotOptions(:series=> {:stacking => 'normal'})
       f.series(:name=>'Importance', color: '#95BBD7', :data=> data_vals) 
     end
@@ -146,9 +147,9 @@ class DecisionsController < ApplicationController
                                         "select distinct b_element_id from surveys where decision_id = " + params[:id])   
     
     for x_element in element_list
-     sum_rows = Survey.find_by_sql("select a_value as sum_value from surveys where a_element_id = " + x_element.a_element_id.to_s +
+     sum_rows = Survey.find_by_sql("select 1, a_value as sum_value from surveys where a_element_id = " + x_element.a_element_id.to_s +
                                         " UNION " +
-                                        "select b_value as sum_value from surveys where b_element_id = " + x_element.a_element_id.to_s) 
+                                        "select 2, b_value as sum_value from surveys where b_element_id = " + x_element.a_element_id.to_s) 
      sum_value = 0
      for i in sum_rows
       if i.sum_value != nil
