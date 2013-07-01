@@ -94,40 +94,42 @@ class SurveysController < ApplicationController
         selection[0]
         selection[1]
         selection[2] 
-        b_val = BigDecimal.new("0")
-        a_val = BigDecimal.new("0")
+        #b_val = BigDecimal.new("0")
+        #a_val = BigDecimal.new("0")
+        b_val = ""
+        a_val = ""
         
         case Integer(selection[0])
           when 1
-            a_val = 9
-            b_val = 1/9
+            a_val = "9"
+            b_val = "1/9"
           when 2
-            a_val = 7
-            b_val = 1/7
+            a_val = "7"
+            b_val = "1/7"
           when 3
-            a_val = 5
-            b_val = 1/5
+            a_val = "5"
+            b_val = "1/5"
           when 4
-            a_val = 3
-            b_val = 1/3
+            a_val = "3"
+            b_val = "1/3"
           when 5
-            a_val = 1
-            b_val = 1
+            a_val = "1"
+            b_val = "1"
           when 6
-            a_val = 1/ 3
-            b_val = 3
+            a_val = "1/3"
+            b_val = "3"
           when 7
-            a_val = 1/ 5
-            b_val = 5
+            a_val = "1/5"
+            b_val = "5"
           when 8
-            a_val = 1/ 7
-            b_val = 7
+            a_val = "1/7"
+            b_val = "7"
           when 9
-            a_val = 1/ 9
-            b_val = 9
+            a_val = "1/9"
+            b_val = "9"
           else
-            a_val = 99
-            b_val = 99
+            a_val = "99"
+            b_val = "99"
          end                  
          Rails.logger.warn "BValue #{b_val}" 
          @survey = Survey.new(:decision_id => decision_id, :a_element_id => selection[1], :b_element_id => selection[2], :a_value => a_val, :b_value => b_val)
@@ -138,7 +140,7 @@ class SurveysController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to surveys_url, notice: 'Murdo is great!' }
+      format.html { redirect_to surveys_url, notice: 'Survey was successfully saved.' }
     end
   end
 end

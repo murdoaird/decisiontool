@@ -93,16 +93,24 @@ class DecisionsController < ApplicationController
 
   def normalise_averages ()
     @decision = Decision.find(params[:id])
-    @calc_avg = Calculation.where(:decision_id => params[:id]).group(:element_id).average('normalised')
-    
+    #@calc_avg = Calculation.where(:decision_id => params[:id]).group(:element_id).average('normalised')
+    @calc_avg = Calculation.find_by_sql("select element_id, avg(CAST(normalised AS decimal)) " + 
+                                          "from calculations " + 
+                                          "where decision_id = " + params[:id] + " " +
+                                          "group by element_id")
+     
     data_vals = Array.new(@calc_avg.count-1)
     data_labels = Array.new(@calc_avg.count-1)
     i_loop = 0
     for avg in @calc_avg
-      Rails.logger.warn "element_id:" + avg[0].to_s + " , average:" + (avg[1]*100).to_s
-      @element = Element.find(avg[0].to_i)
-      data_labels[i_loop] = @element.name
-      data_vals[i_loop] = (avg[1]*100).to_i
+      if avg.element_id != nil
+        Rails.logger.warn "average is:" + avg.avg.to_s
+        Rails.logger.warn "average is(2):" + (avg.avg.to_f*100).to_s
+        Rails.logger.warn "element_id:" + avg.element_id.to_s + " , average:" + (avg.avg.to_f*100).to_s
+        @element = Element.find(avg.element_id.to_i)
+        data_labels[i_loop] = @element.name
+        data_vals[i_loop] = (avg.avg.to_f*100).to_f
+      end 
       i_loop += 1
     end
     
@@ -145,7 +153,7 @@ class DecisionsController < ApplicationController
      for i in sum_rows
       if i.sum_value != nil
         sum_value += (Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f
-        #Rails.logger.warn x_element.a_element_id.to_s + " = " + ((Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f).to_s
+        Rails.logger.warn "sum_value=" + ((Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f).to_s
         @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => ((Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f).to_s)
         if !@calculations.save
           format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          

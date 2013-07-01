@@ -7,6 +7,8 @@
 
     <%= f.input :description %>
 
+	<%= select("element", "decision_id", Decision.all.collect {|d| [ d.title, d.id ] }, {include_blank: 'None'}) %>
+
   </div>
 
   <div class="form-actions">
