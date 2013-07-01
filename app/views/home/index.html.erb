@@ -23,17 +23,17 @@
 	          <td><%= decision.description %></td>
 	          <td><%= decision.elements.count %></td>
 	          <td>
-	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>" class="btn btn-mini" type="button">View elements</a>
+	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>" class="btn btn-mini" type="button">Elements</a>
 	            <%= render(partial: "elements/element", object: decision)%>
 	          </td>
 	          <td>
-	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>" class="btn btn-mini" type="button">Run survey</a>
+	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>" class="btn btn-mini" type="button">Survey</a>
 	            <%= render(partial: "surveys/survey", object: decision)%>
 	          </td>
 	          <td>
-	            <a href="decisions/<%= decision.id %>/results" class="btn btn-mini" type="button">View results</a>
+	            <a href="decisions/<%= decision.id %>/results" class="btn btn-mini" type="button">Results</a>
 	          </td>
-	          <td><%= link_to("Delete decision", decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+	          <td><%= link_to("Delete", decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
 	        </tr>
 	    <% end %>
     </tbody>

@@ -1,4 +1,4 @@
-<div id="survey-decision-<%= survey.id %>" class="modal" style="display: none;">
+<div id="survey-decision-<%= survey.id %>" class="modal" style="width: auto;display: none;">
   <%= simple_form_for survey, :url => save_survey_survey_path(survey), :html => {:method => :put, :class => 'form-horizontal' } do |f| %>
       <div class="modal-header">
         <a class="close" data-dismiss="modal">&#215;</a>
