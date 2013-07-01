@@ -83,12 +83,17 @@ class DecisionsController < ApplicationController
   end
   
   def results  
-    #TODO: calculate results
-    Rails.logger.warn "call sum_elements" 
-    decision_sums = sum_elements
-    normalise_values(decision_sums)
-    normalise_averages
-   
+    Rails.logger.warn "call sum_elements"
+    #sum_elements 
+    decision_sums = sum_elements2
+    if decision_sums.size > 0 
+      normalise_values(decision_sums)
+      normalise_averages
+    else
+      respond_to do |format|
+        format.html { redirect_to decisions_url, notice: 'There were no results to view - have you run the survey yet?' }
+      end 
+    end 
   end 
 
   def normalise_averages ()
@@ -130,14 +135,14 @@ class DecisionsController < ApplicationController
     @calc_results = Calculation.where(:decision_id => params[:id])
     
     for resultX in @calc_results
-      ##TODO: figure out how to round to more than 2 decimals places (3 required) 
-      resultX.normalised = (Rational(*(resultX.value.split('/').map( &:to_i )))).to_f / decision_sums[resultX.element_id]
+      resultX.normalised = (resultX.value.to_f / decision_sums[resultX.element_id]).round(3)
       if !resultX.save
           format.html { redirect_to home_url, notice: 'An error occured saving the survey(2) - we are sorry.' }          
       end 
     end
   end
-  
+
+=begin  
   def sum_elements
 
     @calculation = Calculation.where(:decision_id => params[:id]).destroy_all
@@ -153,9 +158,38 @@ class DecisionsController < ApplicationController
      sum_value = 0
      for i in sum_rows
       if i.sum_value != nil
-        sum_value += (Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f
         Rails.logger.warn "sum_value=" + ((Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f).to_s
         @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => ((Rational(*(i.sum_value.split('/').map( &:to_i )))).to_f).to_s)
+        if !@calculations.save
+          format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          
+        end
+      end
+     end
+     @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => "1")
+     if !@calculations.save
+      format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          
+     end
+    end
+  end
+=end
+  
+  def sum_elements2
+    @calculation = Calculation.where(:decision_id => params[:id]).destroy_all
+    sums = Hash.new
+    element_list = Survey.find_by_sql("select distinct a_element_id from surveys where decision_id = " + params[:id] +
+                                        " UNION " +
+                                        "select distinct b_element_id from surveys where decision_id = " + params[:id])   
+    
+    for x_element in element_list
+     sum_rows = Survey.find_by_sql("select b_element_id, a_value as value from surveys where b_element_id = " + x_element.a_element_id.to_s + 
+                                    " union " + 
+                                    " select a_element_id, b_value as value from surveys where a_element_id = " + x_element.a_element_id.to_s) 
+     sum_value = 0
+     for i in sum_rows
+      if i.value != nil
+        sum_value += (Rational(*(i.value.split('/').map( &:to_i )))).to_f
+        Rails.logger.warn "sum_value=" + ((Rational(*(i.value.split('/').map( &:to_i )))).to_f).to_s
+        @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => ((Rational(*(i.value.split('/').map( &:to_i )))).to_f).to_s)
         if !@calculations.save
           format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          
         end
@@ -170,4 +204,5 @@ class DecisionsController < ApplicationController
     end
     return sums
   end
+  
 end

@@ -85,6 +85,8 @@ class SurveysController < ApplicationController
     
     decision_id = params[:id]
     
+    @survey_old = Survey.where(:decision_id => params[:id]).destroy_all
+    
     params.each do |key,value|
       Rails.logger.warn "Param #{key}: #{value}"
       if key.start_with?('opt_')
