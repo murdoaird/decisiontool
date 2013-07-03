@@ -102,19 +102,18 @@ class DecisionsController < ApplicationController
     @calc_avg = Calculation.find_by_sql("select row_id, avg(CAST(normalised AS decimal)) " + 
                                           "from calculations " + 
                                           "where decision_id = " + params[:id] + " " +
-                                          "group by row_id")
-     
+                                          "group by row_id " + 
+                                          "order by row_id ASC")
+    @element = Element.where(:decision_id => @decision).order("decision_id ASC")
+    
     data_vals = Array.new(@calc_avg.count-1)
     data_labels = Array.new(@calc_avg.count-1)
     i_loop = 0
     for avg in @calc_avg
-      if avg.element_id != nil
-        Rails.logger.warn "average is:" + avg.avg.to_s
-        Rails.logger.warn "average is(2):" + (avg.avg.to_f*100).to_s
-        Rails.logger.warn "element_id:" + avg.row_id.to_s + " , average:" + (avg.avg.to_f*100).to_s
-        @element = Element.find(avg.row_id.to_i)
-        data_labels[i_loop] = @element.name
-        data_vals[i_loop] = (avg.avg.to_f*100).to_f
+      if avg.row_id != nil
+        data_labels[i_loop] = @element[i_loop ].name
+        data_vals[i_loop] = (avg.avg.to_f*100).to_f.round(2)
+        Rails.logger.warn Time.now.to_s + " normalise_averages " + data_vals[i_loop].to_s
       end 
       i_loop += 1
     end
@@ -124,7 +123,7 @@ class DecisionsController < ApplicationController
       f.options[:title][:text] = @decision.title
       f.legend(:reversed => 'true')
       f.xAxis(:categories=> data_labels)
-      f.yAxis(:min=> 0, :max=> 100)
+      f.yAxis(:min=> 0, :max=> 100, :title => { :text => "Percentage" })
       f.plotOptions(:series=> {:stacking => 'normal'})
       f.series(:name=>'Importance', color: '#95BBD7', :data=> data_vals) 
     end
@@ -132,10 +131,11 @@ class DecisionsController < ApplicationController
   end
     
   def normalise_values (decision_sums)
-    @calc_results = Calculation.where(:decision_id => params[:id])
+    @calc_results = Calculation.where(:decision_id => params[:id]).order("element_id ASC")
     
     for resultX in @calc_results
-      resultX.normalised = (resultX.value.to_f / decision_sums[resultX.element_id]).round(3)
+      Rails.logger.warn Time.now.to_s + " normalise for row id =" + resultX.row_id.to_s + " : normalise_values=" + (resultX.value.to_f / decision_sums[resultX.element_id]).round(2).to_s
+      resultX.normalised = (resultX.value.to_f / decision_sums[resultX.element_id]).round(2)
       if !resultX.save
           format.html { redirect_to home_url, notice: 'An error occured saving the survey(2) - we are sorry.' }          
       end 
@@ -178,29 +178,31 @@ class DecisionsController < ApplicationController
     sums = Hash.new
     element_list = Survey.find_by_sql("select distinct a_element_id from surveys where decision_id = " + params[:id] +
                                         " UNION " +
-                                        "select distinct b_element_id from surveys where decision_id = " + params[:id])   
-    
+                                        "select distinct b_element_id from surveys where decision_id = " + params[:id] +
+                                        " order by 1 desc")   
+    loop_count = element_list.count
     for x_element in element_list
-     sum_rows = Survey.find_by_sql("select id, b_element_id, a_value as value, a_element_id as row_id from surveys where b_element_id = " + x_element.a_element_id.to_s + 
+     sum_rows = Survey.find_by_sql("select id, b_element_id, a_value as value, a_value_row as row_id from surveys where b_element_id = " + x_element.a_element_id.to_s + 
                                     " union " + 
-                                    " select id, a_element_id, b_value as value, b_element_id as row_id from surveys where a_element_id = " + x_element.a_element_id.to_s) 
+                                    " select id, a_element_id, b_value as value, b_value_row as row_id from surveys where a_element_id = " + x_element.a_element_id.to_s) 
      sum_value = 0
      for i in sum_rows
       if i.value != nil
         sum_value += (Rational(*(i.value.split('/').map( &:to_i )))).to_f
-        Rails.logger.warn "sum_value=" + ((Rational(*(i.value.split('/').map( &:to_i )))).to_f).to_s
+        Rails.logger.warn Time.now.to_s + " for " + x_element.a_element_id.to_s + ": sum_value=" + ((Rational(*(i.value.split('/').map( &:to_i )))).to_f).to_s
         @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => ((Rational(*(i.value.split('/').map( &:to_i )))).to_f).to_s, :row_id => i.row_id)
         if !@calculations.save
           format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          
         end
       end
      end
-     @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => "1", :row_id => i.row_id)
+     @calculations = Calculation.new(:decision_id => params[:id], :element_id => x_element.a_element_id, :value => "1", :row_id => loop_count)
      if !@calculations.save
       format.html { redirect_to home_url, notice: 'An error occured calulating the results - we are sorry.' }          
      end
-     #Rails.logger.warn "sum_value = 1"
+     Rails.logger.warn Time.now.to_s + " for " + x_element.a_element_id.to_s + ": sum_value=1"
      sums[x_element.a_element_id] = (sum_value + 1)
+     loop_count -= 1
     end
     return sums
   end

@@ -1,3 +1,20 @@
-<div id="container" style="width:100%; height:400px;">
-	<%= high_chart("survey_results", @h_results) %>						
+<div id="container" style="width:100%; height:600px;">
+	<%= high_chart("survey_results", @h_results) %>
+	</p>
+  	<table border="0" cellpadding="10" width="100%" border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;>
+  		<tr>
+  			<td colspan="2" bgcolor="95BBD7" style="font-weight: bold">
+				<%= @decision.description %>
+			</td>
+		</tr>	
+	</table>
+  	<table border="0" cellpadding="10" class="table table-condensed">			
+		<% @decision.elements.each do |element| %>
+		  <tr>
+		    <td><%= element.name %></td>
+		    <td><%= element.description %></td>
+		  </tr>
+		<% end %>
+
+  	</table>					
 </div>

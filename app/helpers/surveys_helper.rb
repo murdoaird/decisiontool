@@ -1,5 +1,5 @@
 module SurveysHelper
-  def build_survey (decision, surveys)
+  def build_survey (decision)
     String surveyOptions = ""
     #decision.id is the decision.id (confirmed)
     surveyOptions = "<table border=0>" 

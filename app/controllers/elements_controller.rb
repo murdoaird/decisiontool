@@ -41,7 +41,6 @@ class ElementsController < ApplicationController
   # POST /elements.json
   def create
     @element = Element.new(params[:element])
-    #@element.decision_id = 1 #TODO: remove hardcoding
     respond_to do |format|
       if @element.save
         format.html { redirect_to @element, notice: 'Element was successfully created.' }

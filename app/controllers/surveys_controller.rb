@@ -87,19 +87,21 @@ class SurveysController < ApplicationController
     
     @survey_old = Survey.where(:decision_id => params[:id]).destroy_all
     
+    #params.sort.map do |key,value|
     params.each do |key,value|
-      Rails.logger.warn "Param #{key}: #{value}"
+      Rails.logger.warn Time.now.to_s + " Param #{key}: #{value}"
       if key.start_with?('opt_')
         #we need to save a new survey
-        #"option_3elementA_1elementB_2
         selection = value.split(' ')
-        selection[0]
-        selection[1]
-        selection[2] 
-        #b_val = BigDecimal.new("0")
-        #a_val = BigDecimal.new("0")
+        #selection[0]
+        #selection[1]
+        #selection[2] 
         b_val = ""
         a_val = ""
+        a_val_row = 0
+        b_val_row = 0
+        a_val_col = 0
+        b_val_col = 0
         
         case Integer(selection[0])
           when 1
@@ -140,9 +142,63 @@ class SurveysController < ApplicationController
           end
       end
     end
-
+    calc_grid_refs(params, decision_id)
     respond_to do |format|
       format.html { redirect_to surveys_url, notice: 'Survey was successfully saved.' }
+    end
+  end
+
+  #class level assignment of constants required
+  START_COL = 2
+  START_RI = 1
+  START_CD = 1
+      
+  def calc_grid_refs (survey_data, decision_id)
+    
+    row_count=0
+    col_count=START_COL
+    col_decrement=START_CD
+    row_increment=START_RI
+    prev_element_id = 0
+    grid_row_count = 0
+
+    params.each do |key,value|
+      if key.start_with?('opt_')
+        #we need to save a new survey
+        selection = value.split(' ')
+        a_element_id = selection[1].to_i
+        b_element_id = selection[2].to_i
+        Rails.logger.warn Time.now.to_s + " calc_grid_refs #{key}: #{value}"
+        if (prev_element_id == 0) or (prev_element_id != a_element_id)
+          grid_row_count += 1 
+          row_count += 1 
+          if prev_element_id == 0
+            col_count = START_COL 
+          else
+            col_count = (START_COL + (grid_row_count-1)) 
+          end if
+          row_increment = START_RI 
+          col_decrement = START_CD
+        else
+          col_count += 1 
+          row_increment += 1
+          col_decrement += 1 
+        end
+        Rails.logger.warn Time.now.to_s + " calc_grid_refs a_row #{row_count}"
+        Rails.logger.warn Time.now.to_s + " calc_grid_refs a_col #{col_count}"
+        Rails.logger.warn Time.now.to_s + " calc_grid_refs b_row #{(row_count + row_increment)}"
+        Rails.logger.warn Time.now.to_s + " calc_grid_refs b_col #{(col_count - col_decrement)}"
+        
+        @survey = Survey.where(decision_id: decision_id, a_element_id: a_element_id, b_element_id: b_element_id).first
+        @survey.a_value_row = row_count
+        @survey.a_value_col = col_count
+        @survey.b_value_row = (row_count + row_increment)
+        @survey.b_value_col = (col_count - col_decrement)
+        if !@survey.save
+          Rails.logger.warn Time.now.to_s + 'Survey grid references were unable to be saved.' 
+        end
+        prev_element_id = a_element_id
+      end
     end
   end
 end
