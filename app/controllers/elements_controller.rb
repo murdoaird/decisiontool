@@ -43,7 +43,9 @@ class ElementsController < ApplicationController
     @element = Element.new(params[:element])
     respond_to do |format|
       if @element.save
-        format.html { redirect_to @element, notice: 'Element was successfully created.' }
+        #format.html { redirect_to @element, notice: 'Element was successfully created.' }
+        #format.json { render json: @element, status: :created, location: @element }
+        format.html { redirect_to root_url, notice: 'Element was successfully created.' }
         format.json { render json: @element, status: :created, location: @element }
       else
         format.html { render action: "new" }
@@ -75,7 +77,9 @@ class ElementsController < ApplicationController
     @element.destroy
 
     respond_to do |format|
-      format.html { redirect_to elements_url }
+      #TODO: redirect to modal pop up
+      #how: http://stackoverflow.com/questions/13657009/issue-with-redirect-to-in-controller-action-load-modal-html-bootstrap
+      format.html { redirect_to root_url, notice: 'Element was successfully deleted.'  }
       format.json { head :no_content }
     end
   end

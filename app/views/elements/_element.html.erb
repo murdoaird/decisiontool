@@ -10,6 +10,7 @@
 		      <th>Element</th>
 		      <th>Description</th>
 		      <th></th>
+		      <th></th>
 		    </tr>
 		    </thead>
 		    <tbody>
@@ -17,11 +18,12 @@
 		        <tr>
 		          <td><%= element.name %></td>
 		          <td><%= element.description %></td>
-		          <td><%= link_to("Delete", element_path(element), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+		          <td><%= link_to( (image_tag("edit-icon.png", :style => 'width:16px;height:16px', :title => 'Edit')), edit_element_path(element), :class => 'btn btn-mini') %></td>
+		          <td><%= link_to( (image_tag("bin.png", :style => 'width:16px;height:16px', :title => 'Delete')), element_path(element), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
 		        </tr>
 		    <% end %>
 		    <tr>
-		      <td colspan="3"><a href="elements" class="btn btn-mini" type="button">Add Element</a></td>
+		      <td colspan="4"><a href="elements/new" class="btn btn-mini" type="button">Add Element</a></td>
 		    </tr>
 		    
 		    
