@@ -1,4 +1,4 @@
-<h3>Decisions <a href="decisions/new"><%= image_tag("plus_icon.png", :style => 'width:32px;height:32px')%></a></h3>
+<h3>Decisions <a href="decisions/new"><%= image_tag("add_property-32.png", :title => 'Add a Decision', :style => 'width:32px;height:32px')%></a></h3>
 <div class="span8">
   <table border="0" cellpadding="10" class="table table-condensed">
     <thead>
@@ -23,17 +23,17 @@
 	          <td><%= decision.description %></td>
 	          <td><%= decision.elements.count %></td>
 	          <td>
-	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>" class="btn btn-mini" type="button">Elements</a>
+	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>"><%= image_tag("list-32.png", :class => 'btn btn-mini', :title => 'View & add elements') %></a>
 	            <%= render(partial: "elements/element", object: decision)%>
 	          </td>
 	          <td>
-	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>" class="btn btn-mini" type="button">Survey</a>
+	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>"><%= image_tag("compare-32.png", :class => 'btn btn-mini', :title => 'Compare the elements') %></a>
 	            <%= render(partial: "surveys/survey", object: decision)%>
 	          </td>
 	          <td>
-	            <a href="decisions/<%= decision.id %>/results" class="btn btn-mini" type="button">Results</a>
+	            <a href="decisions/<%= decision.id %>/results"><%= image_tag("bar-32.png",  :class => 'btn btn-mini', :title => 'View the results') %></a>
 	          </td>
-	          <td><%= link_to("Delete", decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+	          <td><%= link_to((image_tag("delete-32.png",  :title => 'Delete the Decision')), decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
 	        </tr>
 	    <% end %>
     </tbody>

@@ -14,7 +14,7 @@ module SurveysHelper
           if countX < countY
             surveyOptions = surveyOptions + "<tr><td>" + elementX.name + "</td>"
             for i in 1..9
-              surveyOptions = surveyOptions + "<td><input type='radio' name='opt_" + countRow.to_s + "' value='" + i.to_s + " " + elementX.id.to_s + " " + elementY.id.to_s + "'>" + i.to_s + "<br></td><td>&nbsp;</td>"
+              surveyOptions = surveyOptions + "<td><input type='radio' name='opt_" + countRow.to_s + "' value='" + i.to_s + " " + elementX.id.to_s + " " + elementY.id.to_s + "'><br></td><td>&nbsp;</td>"
             end
             countRow += 1
             surveyOptions = surveyOptions + "<td>" + elementY.name + "</td></tr>"

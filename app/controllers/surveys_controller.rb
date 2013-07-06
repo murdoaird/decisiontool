@@ -44,7 +44,7 @@ class SurveysController < ApplicationController
 
     respond_to do |format|
       if @survey.save
-        format.html { redirect_to @survey, notice: 'Survey was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Survey was successfully created.' }
         format.json { render json: @survey, status: :created, location: @survey }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class SurveysController < ApplicationController
 
     respond_to do |format|
       if @survey.update_attributes(params[:survey])
-        format.html { redirect_to @survey, notice: 'Survey was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Survey was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -144,7 +144,7 @@ class SurveysController < ApplicationController
     end
     calc_grid_refs(params, decision_id)
     respond_to do |format|
-      format.html { redirect_to surveys_url, notice: 'Survey was successfully saved.' }
+      format.html { redirect_to root_url, notice: 'Your comparisons were successfully saved.' }
     end
   end
 

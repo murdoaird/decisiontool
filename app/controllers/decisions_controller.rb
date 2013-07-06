@@ -45,7 +45,7 @@ class DecisionsController < ApplicationController
 
     respond_to do |format|
       if @decision.save
-        format.html { redirect_to @decision, notice: 'Decision was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Decision was successfully created.' }
         format.json { render json: @decision, status: :created, location: @decision }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class DecisionsController < ApplicationController
 
     respond_to do |format|
       if @decision.update_attributes(params[:decision])
-        format.html { redirect_to @decision, notice: 'Decision was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Decision was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -77,7 +77,7 @@ class DecisionsController < ApplicationController
     @decision.destroy
 
     respond_to do |format|
-      format.html { redirect_to decisions_url }
+      format.html { redirect_to root_url, notice: 'Decision was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -91,7 +91,7 @@ class DecisionsController < ApplicationController
       normalise_averages
     else
       respond_to do |format|
-        format.html { redirect_to decisions_url, notice: 'There were no results to view - have you run the survey yet?' }
+        format.html { redirect_to root_url, notice: 'There were no results to view - have you run the survey yet?' }
       end 
     end 
   end 

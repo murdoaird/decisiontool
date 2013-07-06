@@ -1,30 +1,30 @@
   <table class="nav">
   <tr>
       <td>
-      	<%= link_to image_tag("DT.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'brand'%>&nbsp;&nbsp;
+      	<%= link_to image_tag("DT.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'brand'%>
       </td>  	
   <% if user_signed_in? %>
-      <td>
-        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>&nbsp;&nbsp;
-      </td>
-  <% else %>
        <td>
-        <%= link_to('Login', new_user_session_path)  %>&nbsp;&nbsp;
-       </td>
-  <% end %>
-  <% if user_signed_in? %>
-       <td>
-        <%= link_to('Edit account', edit_user_registration_path) %>&nbsp;&nbsp;
+        <%= link_to(image_tag("settings-32.png", :title => 'Edit my settings', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), edit_user_registration_path) %>
        </td>
       <% if current_user.has_role? :admin %>
            <td>
-            <%= link_to('Admin', users_path) %>&nbsp;&nbsp;
+            <%= link_to(image_tag("administrator-32.png", :class => 'btn btn-mini', :title => 'Administraton', :style => 'width:32px;height:32px'), users_path) %>
            </td>
       <% end %>
   <% else %>
        <td>
-        <%= link_to('Sign up', new_user_registration_path)  %>&nbsp;&nbsp;
+        <%= link_to(image_tag("add_user-32.png", :title => 'Sign up', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), new_user_registration_path)  %>
        </td>
   <% end %>
+  <% if user_signed_in? %>
+      <td>
+        <%= link_to(image_tag("logout-32.png", :title => 'Logout', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), destroy_user_session_path, :method=>'delete') %>
+      </td>
+  <% else %>
+       <td>
+        <%= link_to(image_tag("login-32.png", :title => 'Login', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), new_user_session_path)  %>
+       </td>
+  <% end %>  
   </tr>	
   </table>  
