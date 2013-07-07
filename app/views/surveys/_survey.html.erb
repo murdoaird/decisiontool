@@ -9,8 +9,8 @@
         <%= build_survey(survey) %>
       </div>
       <div class="modal-footer">
-        <%= f.submit "Save", :class => "btn" %>
-        <a class="btn" data-dismiss="modal" href="#">Close</a>
+      	<%= image_submit_tag("save-26.png", :class => 'btn btn-mini btn_no_border', :title => 'Save results') %>
+        <a data-dismiss="modal" href="#"><%= image_tag("close_window-26.png", :class => 'btn btn-mini btn_no_border', :title => 'Close') %></a>
       </div>
   <% end %>
 </div>

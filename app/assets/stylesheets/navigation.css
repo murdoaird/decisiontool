@@ -1,0 +1,19 @@
+ul.nav {
+    display: block;
+    text-align: center;
+}
+ul.nav li {
+    display: inline;
+    text-align: center;
+}
+ul.nav li:last-child {
+    border-right: none;
+}
+ul.nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn_left {
+	align: left;
+}

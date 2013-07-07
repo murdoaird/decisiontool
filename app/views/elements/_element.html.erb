@@ -18,15 +18,14 @@
 		        <tr>
 		          <td><%= element.name %></td>
 		          <td><%= element.description %></td>
-		          <td><%= link_to( (image_tag("edit-32.png", :style => 'width:16px;height:16px', :title => 'Edit')), edit_element_path(element), :class => 'btn btn-mini') %></td>
-		          <td><%= link_to( (image_tag("delete-32.png", :style => 'width:16px;height:16px', :title => 'Delete')), element_path(element), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+		          <td><%= link_to( (image_tag("edit-26.png", :title => 'Edit')), edit_element_path(element), :class => 'btn btn-mini btn_no_border') %></td>
+		          <td><%= link_to( (image_tag("delete-26.png", :title => 'Delete')), element_path(element), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini btn_no_border') %></td>
 		        </tr>
 		    <% end %>
 		    </tbody>
 		</table>
       </div>
-      <div class="modal-footer">
-      	<%= button_to_function "Add Element", "show_resource('#{element.id}')", :class => 'btn btn-mini' %>
-        <a data-dismiss="modal" href="#"><%= image_tag("close_window-32.png", :style => 'width:16px;height:16px', :class => 'btn btn-mini', :title => 'Close') %></a>
+      <div class="modal-footer btn_left" >
+      	<a href="elements/new"><%= image_tag("add_property-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Add an element', :style => 'width:32px;height:32px')%></a>
       </div>
 </div>

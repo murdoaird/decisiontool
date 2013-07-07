@@ -1,11 +1,10 @@
-<h3>Decisions <a href="decisions/new"><%= image_tag("add_property-32.png", :title => 'Add a Decision', :style => 'width:32px;height:32px')%></a></h3>
 <div class="span8">
+	<a href="decisions/new"><%= image_tag("add_file-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Add a decision', :style => 'width:32px;height:32px')%></a>
+	</p>
   <table border="0" cellpadding="10" class="table table-condensed">
     <thead>
     <% if !user_signed_in? %>
       <p>Please log in to access the system.
-        <%= link_to('Login', new_user_session_path)  %>
-      </li>
 	<% else %>
 	<tr>
       <th>Decision</th>
@@ -23,17 +22,17 @@
 	          <td><%= decision.description %></td>
 	          <td><%= decision.elements.count %></td>
 	          <td>
-	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>"><%= image_tag("list-32.png", :class => 'btn btn-mini', :title => 'View & add elements') %></a>
+	            <a data-toggle="modal" href="#decision-elements-<%= decision.id %>"><%= image_tag("list-32.png", :class => 'btn btn-mini btn_no_border', :title => 'View & add elements') %></a>
 	            <%= render(partial: "elements/element", object: decision)%>
 	          </td>
 	          <td>
-	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>"><%= image_tag("compare-32.png", :class => 'btn btn-mini', :title => 'Compare the elements') %></a>
+	            <a data-toggle="modal" href="#survey-decision-<%= decision.id %>"><%= image_tag("compare-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Compare the elements') %></a>
 	            <%= render(partial: "surveys/survey", object: decision)%>
 	          </td>
 	          <td>
-	            <a href="decisions/<%= decision.id %>/results"><%= image_tag("bar-32.png",  :class => 'btn btn-mini', :title => 'View the results') %></a>
+	            <a href="decisions/<%= decision.id %>/results"><%= image_tag("bar-32.png",  :class => 'btn btn-mini btn_no_border', :title => 'View the results') %></a>
 	          </td>
-	          <td><%= link_to((image_tag("delete-32.png",  :title => 'Delete the Decision')), decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') %></td>
+	          <td><%= link_to((image_tag("delete-32.png",  :title => 'Delete the decision')), decision_path(decision), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini btn_no_border') %></td>
 	        </tr>
 	    <% end %>
     </tbody>

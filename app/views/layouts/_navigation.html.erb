@@ -1,30 +1,33 @@
-  <table class="nav">
-  <tr>
-      <td>
-      	<%= link_to image_tag("DT.png", :border => 0, :alt => '', :title => ''), root_path, :class => 'brand'%>
-      </td>  	
+<%= link_to image_tag("DT.png", :border => 0, :alt => '', :title => 'Home'), root_path, :style => "padding-top: 20px; padding-bottom: 10px;", :class => 'brand'%>
+<ul class="nav">
   <% if user_signed_in? %>
-       <td>
-        <%= link_to(image_tag("settings-32.png", :title => 'Edit my settings', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), edit_user_registration_path) %>
-       </td>
-      <% if current_user.has_role? :admin %>
-           <td>
-            <%= link_to(image_tag("administrator-32.png", :class => 'btn btn-mini', :title => 'Administraton', :style => 'width:32px;height:32px'), users_path) %>
-           </td>
-      <% end %>
+    <li>
+    <%= link_to(image_tag("logout-32.png", :title => 'Logout', :class => 'btn btn-mini btn_no_border', :style => 'width:32px;height:32px;'), destroy_user_session_path, :method=>'delete') %>
+    </li>
   <% else %>
-       <td>
-        <%= link_to(image_tag("add_user-32.png", :title => 'Sign up', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), new_user_registration_path)  %>
-       </td>
+    <li>
+    <%= link_to(image_tag("login-32.png", :title => 'Login', :class => 'btn btn-mini btn_no_border', :style => 'width:32px;height:32px;'), new_user_session_path)  %>
+    </li>
   <% end %>
   <% if user_signed_in? %>
-      <td>
-        <%= link_to(image_tag("logout-32.png", :title => 'Logout', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), destroy_user_session_path, :method=>'delete') %>
-      </td>
+    <li>
+    <%= link_to(image_tag("settings-32.png", :title => 'Edit my settings', :class => 'btn btn-mini btn_no_border', :style => 'width:32px;height:32px'), edit_user_registration_path) %>
+    </li>
   <% else %>
-       <td>
-        <%= link_to(image_tag("login-32.png", :title => 'Login', :class => 'btn btn-mini', :style => 'width:32px;height:32px'), new_user_session_path)  %>
-       </td>
-  <% end %>  
-  </tr>	
-  </table>  
+    <li>
+    <%= link_to(image_tag("add_user-32.png", :title => 'Sign up', :class => 'btn btn-mini btn_no_border', :style => 'width:32px;height:32px'), new_user_registration_path)  %>
+    </li>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <li>
+      <% if current_user.has_role? :admin %>
+        <%= link_to(image_tag("administrator-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Administraton', :style => 'width:32px;height:32px;'), users_path) %>
+      <% end %>
+     </li>
+  <% end %>
+  <li>
+  	<%= image_tag("EC_Harris_logo.gif", :style => 'padding-top: 10px; padding-bottom: 10px;', :title => 'Visit EH Harris corporate site') %>
+  </li>
+
+</ul>

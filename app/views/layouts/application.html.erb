@@ -5,6 +5,10 @@
   <title><%= content_for?(:title) ? yield(:title) : "Decision Tool" %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Decision Tool" %>">
   <%= stylesheet_link_tag "application", :media => "all" %>
+	<!--[if IE 8.000]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<%= stylesheet_link_tag('/assets/stylesheets/navigation.css')%>
+	<![endif]-->  
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield(:head) %>
@@ -31,7 +35,5 @@
     </div>
   </div> <!--! end of .container -->
 </div> <!--! end of #main -->
-<p>
-<div style="width:100%" align="right"><%= image_tag("EC_Harris_logo.gif")%>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </body>
 </html>
