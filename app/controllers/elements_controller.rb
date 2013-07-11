@@ -45,7 +45,12 @@ class ElementsController < ApplicationController
       if @element.save
         #format.html { redirect_to @element, notice: 'Element was successfully created.' }
         #format.json { render json: @element, status: :created, location: @element }
-        format.html { redirect_to root_url, notice: 'Element was successfully created.' }
+        if params.has_key?('another_button.x')
+          format.html { redirect_to "/elements/new", notice: 'Element was successfully created. Add another below.' }
+        else
+          format.html { redirect_to root_url, notice: 'Element was successfully created.' }
+        end
+        
         format.json { render json: @element, status: :created, location: @element }
       else
         format.html { render action: "new" }

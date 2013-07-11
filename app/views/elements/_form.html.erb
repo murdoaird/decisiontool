@@ -12,6 +12,12 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    
+    <%= image_submit_tag("save-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Save element', :style => 'width:32px;height:32px', :name =>
+"save_button")%>
+    
+        <%= image_submit_tag("add_property-32.png", :class => 'btn btn-mini btn_no_border', :title => 'Save element & add another', :style => 'width:32px;height:32px', :name =>
+"another_button")%>
+
   </div>
 <% end %>
