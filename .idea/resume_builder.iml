@@ -21,11 +21,12 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.8, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.2.8, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.8, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.5, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="better_errors (v0.8.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.3.1.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="better_errors (v0.9.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.3.2.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.10, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
@@ -34,7 +35,7 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.6.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.3.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.3.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v1.0.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug_inspector (v0.0.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
@@ -42,24 +43,25 @@
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="email_spec (v1.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="evernote-thrift (v1.24.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="evernote_oauth (v0.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.2.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="figaro (v0.6.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="figaro (v0.7.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.12.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hash-deep-merge (v0.1.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.0.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.3.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="lazy_high_charts (v1.4.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.4.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.23, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.9, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="oauth (v0.4.7, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mini_portile (v0.5.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.7.7, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="newrelic_rpm (v3.6.6.147, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.4.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.15.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
@@ -70,21 +72,20 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v3.2.8, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.2.8, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.4, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.1.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rolify (v3.2.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.13.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.13.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.13.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.13.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.13.2, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.9, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.6, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v2.1.0, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.1.3, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.7, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.18.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.12, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="treetop (v1.4.14, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.37, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.1.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.1, RVM: ruby-1.9.3-p194 [game_stats]) [gem]" level="application" />

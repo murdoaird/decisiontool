@@ -1,10 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="980952456">
+  <component name="DataSourceManagerImpl" format="xml" hash="4258174631">
     <data-source source="LOCAL" name="Rails resume_builder: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="6f314a62-5db2-425a-ad20-0c5af5d6ba64">
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_prod</jdbc-url>
       <user-name>resume_builder_prod_user</user-name>
+      <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails resume_builder: test" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="72e62fa7-7d1f-479e-a38b-f900e5fdd4d4">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
+      <user-name>resume_builder_test_user</user-name>
+      <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails resume_builder: development" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="49142382-b595-4583-b9a6-cd433acd9473">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_dev</jdbc-url>
+      <user-name>resume_builder_dev_user</user-name>
+      <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails resume_builder: cucumber" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="50147925-a580-475e-9855-ce584437fa57">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/resume_builder_test</jdbc-url>
+      <user-name>resume_builder_test_user</user-name>
       <user-password>dfd8dfcfdfd9dfdfdfc7dfcfdff5dfc8dfdfdfc3dfc6dfcedfcfdfd8dff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
       <libraries>
         <library>

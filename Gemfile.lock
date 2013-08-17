@@ -111,6 +111,7 @@ GEM
     mime-types (1.23)
     mini_portile (0.5.0)
     multi_json (1.7.7)
+    newrelic_rpm (3.6.6.147)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
@@ -204,6 +205,7 @@ DEPENDENCIES
   jquery-rails
   launchy (>= 2.1.2)
   lazy_high_charts
+  newrelic_rpm
   pg
   quiet_assets (>= 1.0.1)
   rails (= 3.2.8)
