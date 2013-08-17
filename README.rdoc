@@ -1,9 +1,0 @@
-Welcome to Decision Tool
-=========================
-
-Created by Murdo Aird (22/June 2013)
-
-The project is a throw-away prototype.
-
-=========================
-<end>
